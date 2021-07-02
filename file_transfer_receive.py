@@ -70,14 +70,14 @@ cipher = AES.new(key=PRESHARED_KEY, mode=AES.MODE_CBC, IV=IV)
 ### Get all files
 for _ in range(number_of_files):
 
-    ### Get file-name length: 2 Bytes Big Endian
+    ### Get filename length: 2 Bytes Big Endian
     file_name_length = conn_socket.recv(2)
     file_name_length = int.from_bytes(file_name_length, byteorder="big")
-    ### Assume maximum file-name length of 64 bytes
+    ### Get filename
     file_name = conn_socket.recv(file_name_length).decode(encoding="utf-8")
     print(f"Receiving {file_name}...")
 
-    ### Get file-size: 4 Bytes Big Endian
+    ### Get filesize: 4 Bytes Big Endian
     file_size = conn_socket.recv(4)
     file_size = int.from_bytes(file_size, byteorder="big")
     ### Get file-data
