@@ -108,7 +108,7 @@ for file in DATA:
     ### Send file-data
     sender_socket.send(file[2])
     
-	print(f"Sent {file[0].decode(encoding='utf-8')} ...\n")
+    print(f"Sent {file[0].decode(encoding='utf-8')} ...\n")
 
 ### Close socket when finished
 sender_socket.close()
