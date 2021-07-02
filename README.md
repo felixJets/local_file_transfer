@@ -4,12 +4,25 @@ This project allows users to transfer multiple files across devices in a local n
 
 ![](images/sequence_diagram.png)
 
+
+<!-- Sequende Diagram Code (add one hypen to ->, had to be removed, otherwise it would be seen as end of the comment)
+Sender ->> Receiver: Initalization vector [16 Byte]
+Sender ->> Receiver: Number of files to transfer [2 Byte]
+Sender -> Receiver: Starting file transfer (Repeat for all files)
+Sender ->> Receiver: Filename length [2 Byte]
+Sender ->> Receiver: Filename
+Sender ->> Receiver: Filesize [4 Byte]
+Sender ->> Receiver: File-Data
+Receiver -> Sender: End file transfer
+-->
+
 ## Versions
 
 Tested with:
 
 * Python 3.9.5
 * pycryptodome 3.10.1
+* Ubuntu 20.04.2 and Windows 10
 
 ## Requirements
 
