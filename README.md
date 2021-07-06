@@ -35,7 +35,7 @@ Tested with:
 
 The receiver is waiting for incoming connections. The receiver script must be started first. The received files are stored in a directory called "received_files" located in the current directory.
 ```
-$ file_transfer_receive.py [-p PORT] [-k KEY]
+$ python file_transfer_receive.py [-p PORT] [-k KEY]
 
 optional arguments:
   -p, --port PORT                  Port on which the receiver is listening. Default: 6000
@@ -49,7 +49,7 @@ The sender has to provide the IP-address or the hostname of the receiver.
 The sender is able to select multiple files via the tkinter.filedialog interface.
 
 ```
-$ file_transfer_send.py [-n HOSTNAME] [-a ADDRESS] [-p PORT] [-k KEY]
+$ python file_transfer_send.py [-n HOSTNAME] [-a ADDRESS] [-p PORT] [-k KEY]
 
 optional arguments:
   -n, --name HOSTNAME              Hostname of receiver
